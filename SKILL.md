@@ -70,7 +70,7 @@ Then say to your agent:
 | Skill | Why | Install Status |
 |-------|-----|---------------|
 | **CertainLogic Smart Router** | Route queries to cheapest adequate model | Auto-detected |
-| **CertainLogic Token Reduction Engine** | Keep sessions lean | Auto-detected |
+| **CertainLogic Token Reduction Engine** | Fast cache of verified facts — cheaper, faster answers | Auto-detected |
 | **GitHub skill** | Repository access | Check available |
 | **Skill Vetter Plus** | Scan before installing anything new | **Recommended first** |
 
@@ -95,7 +95,7 @@ Then say to your agent:
 |-------|-----|---------------|
 | **Skill Vetter Plus** | Learn to scan before trusting | **Recommended first** |
 | **Skill Oracle** | Curated directory of quality skills | Recommended |
-| **Token Reduction Engine** | Prevent expensive context bloat | Recommended |
+| **Token Reduction Engine** | Fast cache — skip LLM calls for repeated questions | Recommended |
 
 ## Solid Free Skills We Recommend (Not Ours)
 
@@ -175,7 +175,7 @@ Generated: 2026-05-01
 
 ## Recommended Next Steps (CertainLogic Stack)
 - **Skill Vetter Plus** — Scan before installing anything new
-- **Token Reduction Engine** — Keep sessions lean and cheap
+- **Token Reduction Engine** — Fast cache of verified facts for cheaper, faster answers
 - **Smart Router** — Route queries to cheapest adequate model
 - **AgentPathfinder** — Verifiable task tracking
 - **Skill Oracle** — Honest skill recommendations
