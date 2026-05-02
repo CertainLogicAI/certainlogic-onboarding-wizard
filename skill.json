@@ -1,30 +1,30 @@
 {
   "name": "CertainLogic Onboarding Wizard",
-  "version": "1.0.0",
-  "description": "Guided questionnaire and recommendation system for new OpenClaw users. Generates personalized markdown starter guides. Nothing auto-installs — every step requires your action.",
+  "version": "2.0.0",
+  "description": "Automated onboarding for OpenClaw. Scans environment, detects installed skills, recommends personalized starter stack from CertainLogic + verified community skills. Generates install checklist — you run commands manually.",
   "author": "CertainLogic",
   "license": "MIT",
   "category": "productivity",
-  "tags": ["onboarding", "setup", "beginner", "guide", "recommendations"],
+  "tags": ["onboarding", "setup", "beginner", "getting-started", "wizard"],
   "entry": {
     "cli": "scripts/onboarding_wizard.py"
   },
   "commands": [
     {
       "name": "start",
-      "description": "Run the onboarding questionnaire and generate your starter guide",
+      "description": "Run full onboarding with environment scan + recommendations",
       "args": [
         {
           "name": "goal",
           "type": "string",
           "required": false,
-          "description": "Your primary goal (developer, business, research, productivity, beginner)"
+          "description": "Your goal (developer, business, research, productivity, beginner)"
         }
       ]
     },
     {
-      "name": "list-stacks",
-      "description": "Show all available starter stacks"
+      "name": "scan",
+      "description": "Environment scan only — show what you already have"
     }
   ],
   "homepage": "https://certainlogic.ai",

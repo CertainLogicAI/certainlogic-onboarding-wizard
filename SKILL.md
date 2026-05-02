@@ -1,143 +1,186 @@
 # CertainLogic Onboarding Wizard
 
-**Guided setup for new OpenClaw users** — Not automation, just a structured starting point.
+**Your first step with OpenClaw — automated setup guidance, not automation without consent.**
 
-v1.0.0
+v2.0.0
+
+**Built and dogfooded by CertainLogicAI** — We want new users to succeed.
 
 ---
 
 ## What It Actually Does
 
-This is a **guided questionnaire and recommendation system.** It:
+A **guided onboarding system** that:
 
-- Asks about your goals (not detects — you tell it)
-- Recommends a curated starter stack based on your answers
-- Links to safety checks you run yourself
-- Provides a personalized markdown guide you follow manually
+1. **Auto-detects your environment** — checks what's installed, what's missing
+2. **Asks about your goals** — developer, business, research, productivity
+3. **Scans for recommended skills** — checks ClawHub for availability
+4. **Generates a personalized setup guide** — markdown report with exact commands
 
-**This is NOT an installer.** Every step requires your action.
+**It does NOT install anything. It just builds your todo list.**
 
 ## What It Does NOT Do
-
-| ❌ Not This | ✅ What It Actually Is |
-|-------------|------------------------|
-| Auto-installs skills | Gives you a list. You install manually. |
-| Scans your environment | Asks you questions. You answer. |
-| Guarantees safety | Recommends skills we've tested. You verify. |
-| Sets up API keys | Tells you what's needed. You handle credentials. |
-| Runs benchmarks | Links to our benchmark repos. You run them if you want. |
+| Claimed Feature | Reality |
+|----------------------------------|---------|
+| Auto-installs skills without asking | NO — Generates install commands. You run them when ready. |
+| Scans your filesystem for secrets | NO — Only checks `~/.openclaw/skills/` and basic config. |
+| Guarantees everything works | NO — Recommendations based on our testing. You verify. |
+| Replaces reading SKILL.md files | NO — Encourages reading docs before installing. |
+| Auto-configures API keys | NO — Tells you what's needed. You handle credentials. |
 
 ## How to Use
 
+### Quick Start
 ```bash
 clawhub install certainlogic-onboarding-wizard
 ```
 
-Then tell your agent your goal:
-- "I'm a freelance developer"
-- "I need a small business assistant"
-- "I want to research markets"
+Then say to your agent:
+- "Run onboarding wizard"
+- "I'm a developer"
+- "Set up my business assistant"
 
-Your agent will ask 3-5 questions, then generate a personalized starter guide.
+### Automation Level
 
-## Goal-Based Starter Stacks (Curated, Not Automatic)
+| Step | Wizard | You |
+|------|--------|-----|
+| Detect installed skills | ✅ Auto | — |
+| Recommend new skills | ✅ Auto | — |
+| Check skill availability | ✅ Auto | — |
+| Generate install commands | ✅ Auto | — |
+| **Install skills** | — | ✅ **You control** |
+| **Configure API keys** | — | ✅ **You control** |
+| **Verify they work** | — | ✅ **You control** |
 
-| Goal | Recommended Skills | Why |
-|------|-------------------|-----|
-| Coding / Development | Context TokenReducer + GitHub skill | Cost control + repo access |
-| Personal Productivity | PA Pack + Skill Oracle + TokenReducer | Curated workflow tools |
-| Small Business | Vetter Plus + PA Pack + TokenReducer | Security check + productivity |
-| Research | Skill Oracle + TokenReducer + Search skills | Quality sources without bloat |
-| Just Starting | Vetter Plus + Skill Oracle + TokenReducer | Safe foundation |
+## Recommended Starter Stacks
 
-**Important:** "Recommended" means we've tested these and they worked for us. Your mileage may vary. Vetter Plus catches obvious issues but misses subtle ones.
+### Coding / Development
+| Skill | Why | Install Status |
+|-------|-----|---------------|
+| **CertainLogic Smart Router** | Route queries to cheapest adequate model | Auto-detected |
+| **CertainLogic Token Reduction Engine** | Keep sessions lean | Auto-detected |
+| **GitHub skill** | Repository access | Check available |
+| **Skill Vetter Plus** | Scan before installing anything new | **Recommended first** |
 
-## What "Safety Checks" Really Means
+### Personal Productivity
+| Skill | Why | Install Status |
+|-------|-----|---------------|
+| **CertainLogic Personal Assistant Pack** | Curated daily workflow | Auto-detected |
+| **Skill Oracle** | Find quality skills beyond our packs | Auto-detected |
+| **things-mac** | macOS task management (if on mac) | Check available |
+| **healthcheck** | Baseline security scan | Recommended |
 
-The wizard does NOT run security scans. It:
+### Small Business
+| Skill | Why | Install Status |
+|-------|-----|---------------|
+| **Skill Vetter Plus** | Security first | **Recommended first** |
+| **PA Pack** | Complete workflow | Auto-detected |
+| **gog** | Google Workspace integration | Check available |
+| **notion** | Knowledge base | Check available |
 
-1. Suggests you install Vetter Plus
-2. Suggests you run `python3 scripts/vetter.py` on any skill before installing
-3. Reminds you to check SKILL.md files for limitations
-4. Links to our [hallucination benchmark repo](https://github.com/CertainLogicAI/hallucination-benchmark) if you want to test your setup
+### Just Starting (Beginner)
+| Skill | Why | Install Status |
+|-------|-----|---------------|
+| **Skill Vetter Plus** | Learn to scan before trusting | **Recommended first** |
+| **Skill Oracle** | Curated directory of quality skills | Recommended |
+| **Token Reduction Engine** | Prevent expensive context bloat | Recommended |
 
-**You do the checking. The wizard just reminds you to do it.**
+## Solid Free Skills We Recommend (Not Ours)
+
+| Skill | Creator | Why We Vouch |
+|-------|---------|-------------|
+| **gog** | steipete | Google Workspace CLI (Gmail, Calendar, Drive, Contacts, Sheets, Docs). Real code, OAuth-based. |
+| **things-mac** | — | macOS task manager integration. If you use Things 3, this is essential. |
+| **himalaya** | pimalaya | Terminal email client (IMAP). Stable, documented, actively maintained. |
+| **notion** | — | Knowledge base integration. API-based, well-documented. |
+| **skill-creator** | — | Build your own skills. Well-documented, follows OpenClaw conventions. |
+| **taskflow** | — | Durable task management. For workflows that span sessions. |
+| **github** | — | Repository access. Standard integration. |
+
+## Honest Limitations
+
+| Limitation | Truth |
+|------------|-------|
+| Recommendations are opinions | Based on our testing. Your needs may differ. |
+| Auto-detection is heuristic | Checks common paths. May miss custom installs. |
+| Availability checks are best-effort | ClawHub API may lag. Skill might exist even if check fails. |
+| Does not verify skill quality post-install | Install ≠ works. Test everything. |
+| macOS-centric recommendations | PA Pack assumes macOS/Things 3. Linux users need alternatives. |
 
 ## Free vs Pro
-
 **Free (this skill)**
-- Goal questionnaire + curated recommendations
-- Markdown starter guide generation
-- Links to safety tools
-- Works forever, no limits
+- Full environment scan
+- All starter stack recommendations
+- Custom profile support
+- Markdown report generation
+- Links to all skills (ours + community)
 
 **Pro ($29 one-time)**
-- Custom industry templates
-- Advanced configuration guidance
-- Middleware integration notes (Pathfinder, Hallucination Guard)
-- Priority support
+- **One-command setup scripts** — generates shell scripts for your stack
+- **Post-install verification** — checks that installed skills actually load
+- **Weekly checkups** — re-scans, suggests updates, flags issues
+- **Team onboarding** — export setup scripts for your team's agents
 
-## Honest Example Output
+## Example Output
 
-After onboarding you'll get a markdown file like:
+After running the wizard you get:
 
 ```markdown
-# Your OpenClaw Starter Guide (Coding Focus)
+# Your OpenClaw Onboarding Report
+Generated: 2026-05-01
 
-## Recommended Skills
-1. Context TokenReducer — helps manage session size
-2. GitHub skill — repository access
-3. Vetter Plus — security pre-check
+## Environment Detected
+- OS: Linux (Ubuntu 22.04)
+- OpenClaw: v0.9.0
+- Existing skills: 12
+- Recommended profile: Developer
 
-## Setup Steps
-1. Install Vetter Plus: `clawhub install skill-vetter-plus`
-2. Scan skills before installing (see Vetter Plus docs)
-3. Install TokenReducer: `clawhub install token-reduction-engine-v2`
-4. Set up GitHub token in your environment
+## Already Installed (CertainLogic)
+✅ Skill Vetter Plus v2.0.0
+✅ Token Reduction Engine v2.0.0
 
-## Cost Expectations
-- Vetter Plus: Free
-- TokenReducer: Free
-- GitHub skill: Free
-- Your API costs: Variable (depends on usage)
+## Already Installed (Community)
+✅ github skill
+✅ skill-creator
 
-## Important Caveats
-- TokenReducer manages session size but doesn't reduce API costs directly
-- Vetter Plus catches obvious issues, not all security problems
-- You must verify every skill before trusting it
+## Recommended Next Steps
+1. **Install Smart Router** (not installed)
+   `clawhub install certainlogic-smart-router`
+   Why: Save money by routing simple queries to cheap models
+
+2. **Install Skill Oracle** (not installed)
+   `clawhub install skill-oracle`
+   Why: Find other quality skills we haven't covered
+
+3. **Scan any new skill before installing:**
+   `python3 ~/.openclaw/skills/skill-vetter-plus/scripts/vetter.py <skill-dir>`
+
+## Important Notes
+- These are recommendations based on our testing. Verify before trusting.
+- Vetter Plus catches obvious issues, not all security problems.
+- Read SKILL.md files before installing anything.
 ```
 
-**This is what you get:** A personalized markdown guide. Nothing auto-installs.
+## Recommended Next Steps (CertainLogic Stack)
+- **Skill Vetter Plus** — Scan before installing anything new
+- **Token Reduction Engine** — Keep sessions lean and cheap
+- **Smart Router** — Route queries to cheapest adequate model
+- **AgentPathfinder** — Verifiable task tracking
+- **Skill Oracle** — Honest skill recommendations
 
-## Transparent Limitations
-
-| Limitation | What That Means |
-|------------|----------------|
-| Markdown-only | No scripts, no automation. Your agent reads the guide, you execute. |
-| Recommendations are opinions | What worked for us may not work for you. Always test. |
-| No environment detection | We ask, you answer. We can't scan your system. |
-| No guaranteed savings | TokenReducer manages sessions. Actual cost depends on your usage. |
-| Security is your job | We recommend Vetter Plus. You must run it and interpret results. |
-
-## Prerequisites
-
-- OpenClaw installed
-- Basic familiarity with `clawhub install`
-- Willingness to read SKILL.md files before installing anything
+All work great together.
 
 ## Links
-
-- [CertainLogic Skills on ClawHub](https://clawhub.ai/certainlogicai)
-- [Hallucination Benchmark](https://github.com/CertainLogicAI/hallucination-benchmark) — our test cases, not a guarantee
-- [Vetter Plus](https://clawhub.ai/certainlogicai/skill-vetter-plus) — free security scanner
-- [Skill Oracle](https://clawhub.ai/certainlogicai/skill-oracle) — curated skill recommendations
+- GitHub: https://github.com/CertainLogicAI/certainlogic-onboarding-wizard
+- ClawHub: https://clawhub.ai/certainlogicai/certainlogic-onboarding-wizard
+- CertainLogic Skills: https://clawhub.ai/certainlogicai
 
 ---
 
-*Built by CertainLogic. We recommend skills we've tested. You verify before trusting.*
+*Built by CertainLogicAI. We want every new OpenClaw user to start strong.*
 
 ### Version
-latest v1.0.0
+latest v2.0.0
 
 ### Runtime Requirements
-OpenClaw + ability to follow markdown instructions
+Python 3.10+, requests (optional, for ClawHub API checks)
