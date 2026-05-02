@@ -1,6 +1,10 @@
 # CertainLogic Onboarding Wizard
 
-**Your first step with OpenClaw — automated environment scan, personalized recommendations, zero forced installs.**
+**5 minutes to a productive agent. Not 5 days of trial and error.** ⚡
+
+Most new OpenClaw users install a dozen random skills, discover half don't work, uninstall them, and repeat. A week later they're frustrated and their agent still can't do useful work.
+
+This wizard fixes that. One scan, one report, exact install commands. Your agent is productive on day 1.
 
 v2.0.0
 

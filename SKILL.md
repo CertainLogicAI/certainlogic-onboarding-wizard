@@ -1,12 +1,22 @@
 # CertainLogic Onboarding Wizard
 
-**Your first step with OpenClaw — automated setup guidance, not automation without consent.**
+**5 minutes to a productive agent. Not 5 days of trial and error.** ⚡
 
 v2.0.0
 
 **Built and dogfooded by CertainLogicAI** — We want new users to succeed.
 
 ---
+
+## Why Use This
+
+Most new OpenClaw users:
+1. Install a dozen random skills
+2. Discover half don't work on their OS
+3. Uninstall, try again, hit more errors
+4. A week later: frustrated, no productivity
+
+This wizard scans your environment in ~10 seconds and gives you a focused install list with exact commands. **Your agent does useful work on day 1 or 2, not day 8.**
 
 ## What It Actually Does
 
@@ -18,6 +28,8 @@ A **guided onboarding system** that:
 4. **Generates a personalized setup guide** — markdown report with exact commands
 
 **It does NOT install anything. It just builds your todo list.**
+
+**Time investment: 5 minutes reading the report. Not 5 days discovering by trial and error.**
 
 ## What It Does NOT Do
 | Claimed Feature | Reality |
