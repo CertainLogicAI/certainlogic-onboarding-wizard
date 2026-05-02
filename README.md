@@ -1,12 +1,17 @@
 # CertainLogic Onboarding Wizard
 
-**Guided setup for new OpenClaw users** — AI-powered questionnaire that generates a personalized markdown starter guide.
+**Your first step with OpenClaw — automated environment scan, personalized recommendations, zero forced installs.**
 
-## What It Is
+v2.0.0
 
-A conversational onboarding tool. You tell us your goals, we ask 3-5 follow-up questions, then generate a tailored markdown guide with curated skill recommendations, setup steps, and honest caveats.
+## What It Does
 
-**Nothing auto-installs. Nothing auto-configures. You follow the guide manually.**
+1. **Auto-scans your environment** — OS, OpenClaw version, installed skills
+2. **Detects your goal** — developer, business, research, productivity, beginner
+3. **Recommends a starter stack** — CertainLogic skills + verified community skills
+4. **Generates install checklist** — exact `clawhub install` commands, you run when ready
+
+**Nothing auto-installs. Nothing auto-configures. You control every step.**
 
 ## Quick Start
 
@@ -14,62 +19,58 @@ A conversational onboarding tool. You tell us your goals, we ask 3-5 follow-up q
 clawhub install certainlogic-onboarding-wizard
 ```
 
-Then in your agent chat, say:
+Then say:
 - "Run onboarding wizard"
-- "I'm a freelance developer"
-- "I need a small business assistant"
+- "I'm a developer"
+- "Set up my business stack"
 
 ## What You Get
 
-A markdown file like:
+A markdown report like:
 
 ```markdown
-# Your OpenClaw Starter Guide (Small Business)
+## Environment Detected
+- OS: Linux (Ubuntu 22.04)
+- OpenClaw: 2026.4.12
+- Existing skills: 12 installed
 
-## Recommended Skills
-1. Vetter Plus — security pre-check (free)
-2. PA Pack — personal assistant workflow (free)
-3. TokenReducer — session size management (free)
+## CertainLogic Skills Recommended
+- ⬜ Skill Vetter Plus — `clawhub install skill-vetter-plus`
+- ⬜ Smart Router — `clawhub install certainlogic-smart-router`
+- ✅ Token Reduction Engine (already installed)
 
-## Setup Steps
-1. Install Vetter Plus
-2. Scan any skill before installing it
-3. Install PA Pack
-4. Review PA_GUIDE.md for your daily workflow
-
-## Cost Expectations
-All recommended skills: Free
-Your API costs: Variable (depends on usage)
-
-## Important Caveats
-- These recommendations worked for us. Test before trusting.
-- Vetter Plus catches obvious issues, not all security problems.
-- You must verify every skill before trusting it.
+## Community Skills Recommended
+- ⬜ GitHub Integration — `clawhub install github`
+- ⬜ Skill Creator — `clawhub install skill-creator`
+- ⏭️ Things 3 (skipped — macOS only, you're on Linux)
 ```
 
-**This is what you get.** A personalized markdown guide. Nothing else.
+## Automated Detection
+
+| What It Checks | How |
+|----------------|-----|
+| Operating system | `platform.system()` — Linux/macOS |
+| OpenClaw version | `openclaw --version` |
+| Installed skills | Scans `~/.openclaw/skills/` |
+| Platform compatibility | Skips macOS-only skills on Linux |
 
 ## Honest Limitations
 
-| Limitation | Truth |
-|------------|-------|
-| Markdown-only | No scripts. Your agent reads, you execute. |
-| Recommendations are opinions | What worked for us. Always test. |
-| No environment scanning | We ask, you answer. |
-| No guaranteed savings | Costs depend on your usage. |
-| Security is your responsibility | We suggest Vetter Plus. You run it. |
+- Recommendations are opinions (our testing, not universal)
+- Auto-detection is heuristic (misses custom setups)
+- Doesn't verify skill quality post-install
+- Doesn't configure API keys or credentials
 
 ## Free vs Pro
 
-**Free** — Questionnaire + starter guide + safety links
-**Pro ($29)** — Custom templates + advanced config + priority support
+**Free** — Full scan, all profiles, all recommendations
+**Pro ($29)** — One-command setup scripts, post-install verification, weekly checkups
 
 ## Links
 
-- [ClawHub Listing](https://clawhub.ai/certainlogicai/certainlogic-onboarding-wizard)
-- [CertainLogic Skills](https://clawhub.ai/certainlogicai)
-- [Hallucination Benchmark](https://github.com/CertainLogicAI/hallucination-benchmark)
+- [GitHub](https://github.com/CertainLogicAI/certainlogic-onboarding-wizard)
+- [ClawHub](https://clawhub.ai/certainlogicai/certainlogic-onboarding-wizard)
 
 ---
 
-*Built by CertainLogic. We recommend skills we've tested. You verify before trusting.*
+*Built by CertainLogicAI. We want every new OpenClaw user to start strong.*
