@@ -2,13 +2,11 @@
 
 **5 minutes to a productive agent. Not 5 days of trial and error.** ⚡
 
-v2.0.0
+v2.1.0
 
 **Built and dogfooded by CertainLogicAI** — We want new users to succeed.
 
 ---
-
-## Why Use This
 
 Most new OpenClaw users:
 1. Install a dozen random skills
@@ -119,19 +117,33 @@ Then say to your agent:
 | Does not verify skill quality post-install | Install ≠ works. Test everything. |
 | macOS-centric recommendations | PA Pack assumes macOS/Things 3. Linux users need alternatives. |
 
-## Free vs Pro
-**Free (this skill)**
-- Full environment scan
-- All starter stack recommendations
-- Custom profile support
-- Markdown report generation
-- Links to all skills (ours + community)
+## Free Is the Product
 
-**Pro ($29 one-time)**
-- **One-command setup scripts** — generates shell scripts for your stack
-- **Post-install verification** — checks that installed skills actually load
-- **Weekly checkups** — re-scans, suggests updates, flags issues
-- **Team onboarding** — export setup scripts for your team's agents
+**Everything in this skill is free. No feature gating, no "upgrade to unlock."**
+
+| What You Get | How |
+|----------------|-----|
+| Full environment scan | `python3 scripts/onboarding_wizard.py --scan-only` |
+| All goal profiles | Pass any goal: developer, business, research, productivity, beginner |
+| One-command setup scripts | `python3 scripts/onboarding_wizard.py developer --setup-script` |
+| Post-install verification | `python3 scripts/onboarding_wizard.py --verify` |
+| Weekly checkups | `python3 scripts/onboarding_wizard.py --weekly-checkup` |
+| Team onboarding export | `python3 scripts/onboarding_wizard.py developer --team-export /path` |
+
+**Pro ($29) is a relationship, not an unlock:**
+- Priority support (24 hour response SLA)
+- Early access to new features
+- Custom industry templates (healthcare, legal, finance)
+- One-on-one onboarding call (15 min)
+
+If you can find a free OpenClaw onboarding skill with better documentation or more thorough error handling, install it. We'll wait.
+
+## Why Not Fork This?
+
+Clones copy code. They don't copy the documentation depth, the edge-case handling, or the active maintenance. This wizard ships with:
+- Every failure path has a specific, actionable error message
+- Every recommendation explains *why* it's recommended
+- Weekly checkups that actually catch drift, not just print a timestamp
 
 ## Example Output
 
@@ -192,7 +204,7 @@ All work great together.
 *Built by CertainLogicAI. We want every new OpenClaw user to start strong.*
 
 ### Version
-latest v2.0.0
+latest v2.1.0
 
 ### Runtime Requirements
 Python 3.10+, requests (optional, for ClawHub API checks)

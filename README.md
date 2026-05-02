@@ -6,7 +6,7 @@ Most new OpenClaw users install a dozen random skills, discover half don't work,
 
 This wizard fixes that. One scan, one report, exact install commands. Your agent is productive on day 1.
 
-v2.0.0
+v2.1.0
 
 ## What It Does
 
@@ -62,13 +62,34 @@ A markdown report like:
 
 - Recommendations are opinions (our testing, not universal)
 - Auto-detection is heuristic (misses custom setups)
-- Doesn't verify skill quality post-install
 - Doesn't configure API keys or credentials
+- Verification checks file structure, not runtime behavior
 
-## Free vs Pro
+## Free Is the Product
 
-**Free** — Full scan, all profiles, all recommendations
-**Pro ($29)** — One-command setup scripts, post-install verification, weekly checkups
+CertainLogic free products are built to the same standard as paid products.
+Upgrade when you want deeper support, not when you need basic features.
+
+**Everything here is free:**
+- Full environment scan
+- All goal profiles
+- One-command setup scripts (`--setup-script`)
+- Post-install verification (`--verify`)
+- Weekly checkups (`--weekly-checkup`)
+- Team onboarding export (`--team-export`)
+
+**Pro ($29) is a relationship, not an unlock:**
+- Priority support (24 hour response guarantee)
+- Early access to new features
+- Custom industry templates (healthcare, legal, finance)
+- One-on-one onboarding call (15 min)
+
+## Why Not Fork This?
+
+Clones ship code. We ship code + documentation + edge-case handling + active maintenance.
+
+Every failure path in this wizard has a helpful error message.
+Knockoffs ship `print("error")` and call it a day.
 
 ## Links
 
